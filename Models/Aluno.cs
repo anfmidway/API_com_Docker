@@ -14,7 +14,7 @@ namespace SmartSchool.API.Models
             this.Name = name;
             this.SobreNome = sobreNome;
             this.Telefone = telefone;
-
+        
         }
         public int Id { get; set; }
         public string Name { get; set; }

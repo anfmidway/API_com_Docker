@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using SmartSchool.API.Models;
 using System.Linq;
-
+using SmartSchool.API.Data;
 
 namespace SmartSchool.API.Controllers
 {
@@ -10,32 +10,24 @@ namespace SmartSchool.API.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        public List<Aluno> alunos = new List<Aluno>()
-        {
-            new Aluno()
-            {
-              Id=1,  Name = "Joice",SobreNome="Dara",Telefone="112233"
-            },
-           new Aluno(){
-                 Id=2,  Name = "Paula",SobreNome="Vida",Telefone="112244"
-            },
-           new Aluno()
-           {
-                Id=3,  Name = "José",SobreNome="Rei",Telefone="113344"
-           }
-        };
+        private readonly SmartSchoolContext _smartSchoolContex;
+ 
+        public AlunoController(SmartSchoolContext smartSchoolContext)
+       {
+            _smartSchoolContex = smartSchoolContext;
+        }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(alunos);
+            return Ok(_smartSchoolContex.Alunos);
         }
 
         //ById ou ByName para query string
         [HttpGet("byId")]
         public IActionResult GetById(int id)
         {
-            var aluno = alunos.FirstOrDefault(a => a.Id == id);
+            var aluno = _smartSchoolContex.Alunos.FirstOrDefault(a => a.Id == id);
             if (aluno == null) return BadRequest("Dados Não encontrado");
 
             return Ok(aluno);
@@ -44,7 +36,7 @@ namespace SmartSchool.API.Controllers
         [HttpGet("ByName")]
         public IActionResult GetById(string nome, string sobreNome)
         {
-            var aluno = alunos.FirstOrDefault(
+            var aluno = _smartSchoolContex.Alunos.FirstOrDefault(
                 a => a.Name.Contains(nome) && a.SobreNome.Contains(sobreNome)
             );
             if (aluno == null) return BadRequest("Aluno Não encontrado");
@@ -61,7 +53,7 @@ namespace SmartSchool.API.Controllers
         [HttpPut]
         public IActionResult Put(int id, Aluno aluno)
         {
-            return Ok(alunos);
+            return Ok(aluno);
         }
 
 

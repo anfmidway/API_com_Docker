@@ -10,6 +10,8 @@ namespace SmartSchool.API.Models
             this.AlunoId = alunoId;
             this.CursoId = cursoId;
         }
+
+        public int Id { get; set; }
         public DateTime DataIni { get; set; } = DateTime.Now;
         public DateTime? DataFim { get; set; }
         public int AlunoId { get; set; }
