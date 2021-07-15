@@ -17,7 +17,7 @@ namespace SmartSchool.API.Controllers
               Id=1,  Name = "Joice",SobreNome="Dara",Telefone="112233"
             },
            new Aluno(){
-                Id=2,  Name = "Paula",SobreNome="Vida",Telefone="112244"
+                 Id=2,  Name = "Paula",SobreNome="Vida",Telefone="112244"
             },
            new Aluno()
            {
