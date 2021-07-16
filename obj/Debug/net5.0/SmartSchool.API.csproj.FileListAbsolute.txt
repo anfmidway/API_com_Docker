@@ -82,3 +82,7 @@ C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\obj\Debug\net5.0\r
 C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\obj\Debug\net5.0\SmartSchool.API.pdb
 C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\obj\Debug\net5.0\SmartSchool.API.genruntimeconfig.cache
 C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\ANFSUSAX\Documents\Udemy\SmartSchool\SmartSchool.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
